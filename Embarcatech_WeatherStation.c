@@ -10,8 +10,8 @@
 #include <math.h>
 #include "pico/bootrom.h"
 
-#define WIFI_SSID "SSID"
-#define WIFI_PASS "password"
+#define WIFI_SSID "Cosmo"
+#define WIFI_PASS "Gcosmo94"
 
 #define I2C_PORT i2c0               // i2c0 pinos 0 e 1, i2c1 pinos 2 e 3
 #define I2C_SDA 0                   // 0 ou 2
@@ -278,9 +278,9 @@ int main() {
             ssd1306_draw_string(&ssd, "BMP280  DHT22", 10, 28);
             ssd1306_line(&ssd, 63, 25, 63, 60, cor);
             ssd1306_draw_string(&ssd, str_tmp2, 14, 41);
-            ssd1306_draw_string(&ssd, str_humd, 14, 52);
+            ssd1306_draw_string(&ssd, str_alt, 10, 52);
             ssd1306_draw_string(&ssd, str_tmp1, 73, 41);
-            ssd1306_draw_string(&ssd, str_alt, 73, 52);
+            ssd1306_draw_string(&ssd, str_humd, 80, 52);
             ssd1306_send_data(&ssd);
         }
 
